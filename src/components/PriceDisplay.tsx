@@ -38,7 +38,7 @@ const PriceDisplay: React.FC<PriceDisplayProps> = ({ product, quantity }) => {
             </div>
             <div className="ml-3">
               <p className="text-sm text-yellow-700">
-                La cantidad mínima recomendada es de 12 unidades para aplicar a los precios por volumen.
+                La cantidad mínima es de 12 unidades.
               </p>
             </div>
           </div>
