@@ -13,12 +13,8 @@ export const calculateTotalPrice = (unitPrice: number, quantity: number): number
 };
 
 export const formatPrice = (price: number): string => {
-  return new Intl.NumberFormat('es-CO', {
-    style: 'currency',
-    currency: 'COP',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0
-  }).format(price);
+  console.log(price)
+  return `${price} COP`;
 };
 
 export const getPriceTierMessage = (product: Product, quantity: number): string => {

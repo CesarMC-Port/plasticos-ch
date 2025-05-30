@@ -4,6 +4,7 @@ import { products } from '../data/products';
 import ProductCard from './ProductCard';
 import QuantitySelector from './QuantitySelector';
 import PriceDisplay from './PriceDisplay';
+import Logo from '../assets/logo.png';
 import { saveState, loadState, clearState } from '../utils/localStorage';
 
 const Calculator: React.FC = () => {
@@ -49,6 +50,9 @@ const Calculator: React.FC = () => {
   
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="fixed left-[20px] top-[20px] w-[100px] h-[100px] rounded-[20px] overflow-hidden flex justify-center items-center">
+        <img src={Logo}/>
+      </div>
       <header className="mb-12 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           Calculadora de Precios

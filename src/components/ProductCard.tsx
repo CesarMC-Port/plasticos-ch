@@ -30,12 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, isSelected, onSelect
         <p className="text-lg font-medium text-gray-600">{product.size}</p>
         
         <div className="mt-3 text-base text-gray-500">
-          <p>Desde {new Intl.NumberFormat('es-CO', { 
-            style: 'currency', 
-            currency: 'COP',
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-          }).format(product.priceTiers[0].price)} por unidad</p>
+          <p>Desde {product.priceTiers[0].price} COP por unidad</p>
         </div>
       </div>
       
