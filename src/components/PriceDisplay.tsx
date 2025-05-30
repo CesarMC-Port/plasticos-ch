@@ -63,10 +63,33 @@ const PriceDisplay: React.FC<PriceDisplayProps> = ({ product, quantity }) => {
           </div>
         </div>
         
-        <div className="bg-blue-50 p-4 rounded-xl mt-4">
-          <p className="text-blue-800 text-lg">
-            <span className="font-medium">Tramo de precios actual:</span> {tierMessage}
-          </p>
+        <div className="bg-blue-50 p-6 rounded-xl">
+          <h4 className="text-lg font-semibold text-blue-900 mb-4">Tramos de precios disponibles:</h4>
+          <ul className="space-y-3">
+            {product.priceTiers.map((tier, index) => (
+              <li
+                key={tier.min}
+                className={`p-4 rounded-lg transition-colors duration-200 ${
+                  index === currentTierIndex
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-white text-gray-600'
+                }`}
+              >
+                <div className="flex justify-between items-center">
+                  <span>
+                    {tier.max === null
+                      ? `${tier.min}+ unidades`
+                      : `${tier.min} a ${tier.max} unidades`}
+                  </span>
+                  <span className={`font-semibold ${
+                    index === currentTierIndex ? 'text-white' : 'text-gray-800'
+                  }`}>
+                    {formatPrice(tier.price)} c/u
+                  </span>
+                </div>
+              </li>
+            ))}
+          </ul>
           
           {/* {unitsToNextTier && (
             <p className="text-blue-700 text-base mt-2">
