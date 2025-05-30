@@ -13,8 +13,7 @@ export const calculateTotalPrice = (unitPrice: number, quantity: number): number
 };
 
 export const formatPrice = (price: number): string => {
-  console.log(price)
-  return `${price} COP`;
+  return `${price.toLocaleString('es-CO')} COP`;
 };
 
 export const getPriceTierMessage = (product: Product, quantity: number): string => {
