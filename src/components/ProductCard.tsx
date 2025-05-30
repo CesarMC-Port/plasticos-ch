@@ -30,7 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, isSelected, onSelect
         <p className="text-lg font-medium text-gray-600">{product.size}</p>
         
         <div className="mt-3 text-base text-gray-500">
-          <p>Desde {product.priceTiers[0].price} COP por unidad</p>
+          {/* <p>Desde {product.priceTiers[0].price} COP por unidad</p> */}
         </div>
       </div>
       

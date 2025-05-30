@@ -49,8 +49,8 @@ const Calculator: React.FC = () => {
   };
   
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
-      <div className="fixed left-[20px] top-[20px] w-[100px] h-[100px] rounded-[20px] overflow-hidden flex justify-center items-center">
+    <div className="relative max-w-7xl mx-auto px-4 py-[90px] md:py-[20px]">
+      <div className="absolute left-[20px] top-[20px] w-[60px] h-[60px] md:w-[100px] md:h-[100px] rounded-[10px] md:rounded-[20px] overflow-hidden flex justify-center items-center">
         <img src={Logo}/>
       </div>
       <header className="mb-12 text-center">
