@@ -110,7 +110,7 @@ const Calculator: React.FC = () => {
               className="
                 w-[90%] py-4 px-6 text-lg border-2 border-white rounded-xl text-white
                 bg-blue-900 hover:bg-blue-600 hover:border-white focus:outline-none focus:ring-2 
-                focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200 fixed md:relative top-[20px] md:top-[0]
+                focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200 fixed md:relative bottom-[20px] md:bottom-[0]
                 flex flex-row justify-around items-center left-[5%] z-[100]
               "
             >
