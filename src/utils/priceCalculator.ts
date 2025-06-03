@@ -13,7 +13,9 @@ export const calculateTotalPrice = (unitPrice: number, quantity: number): number
 };
 
 export const formatPrice = (price: number): string => {
-  return `${price.toLocaleString('es-CO')} COP`;
+  const parts = price.toString().split('.');
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  return `${parts.join('.')} COP`;
 };
 
 export const getPriceTierMessage = (product: Product, quantity: number): string => {
